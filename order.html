@@ -1,0 +1,29 @@
+<div data-role="page" id="order" data-title="" ng-controller="orderCtrl">
+    <div data-role="header" class="ui-header-fixed">
+        <h1></h1>
+        <a href="#" data-rel="back">返回</a>
+        <a href="#" class="btn ui-btn-corner-all ui-shadow ui-icon-bars" ng-click="jump2Orders()">订单</a>
+    </div>
+    <div class="ui-content">
+        <p class="warning" ng-show="showWarning">提示：{{state.reason}}</p>
+        <form>
+            <label for="userName">联系人：</label>
+            <input type="text" id="userName" ng-model="order.userName"/>
+            <fieldset id="gender" data-role="controlgroup" data-type="horizontal">
+                <legend>性别：</legend>
+                <label>
+                    <input type="radio" name="gender" value="1" ng-model="order.gender"/>男
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="2" ng-model="order.gender"/>女
+                </label>
+            </fieldset>
+            <label for="phone">联系电话：</label>
+            <input type="text" id="phone" ng-model="order.phone"/>
+            <label for="addr">送餐地址：</label>
+            <textarea name="addr" id="addr" cols="30" rows="10" ng-model="order.addr"></textarea>
+            <input id="confirm" type="button" class="ui-btn ui-btn-corner-all" value="确定下单" ng-click="submitOrder()"/>
+        </form>
+
+    </div>
+</div>

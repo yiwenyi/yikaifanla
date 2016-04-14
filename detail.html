@@ -1,0 +1,38 @@
+<div data-role="page" id="pagedetail" data-title="" ng-controller="detailCtrl">
+    <div data-role="header" class="ui-header-fixed">
+        <h1></h1>
+        <a href="#" data-rel="back">返回</a>
+        <a href="#" class="btn ui-btn-corner-all ui-shadow ui-icon-bars"  ng-click="jump2Orders()">订单</a>
+    </div>
+    <div class="ui-content">
+        <div class="ui-bar ui-bar-a ui-corner-all custom-corners">
+            <div class="detail-head">
+                <h5><a href="index.html">首页</a></h5>
+                <h5>/</h5>
+                <h5>详情</h5>
+            </div>
+        </div>
+        <div class="ui-body ui-body-a">
+            <div class="detail-dish">
+                <div class="ui-content">
+                    <h3>{{dish.name}}</h3>
+
+                    <div class="ui-page-theme-a">
+                        <img ng-src="img/{{dish.img_lg}}" alt=""/>
+
+                        <div class="ui-content">
+                            <h5>{{dish.meterial}}</h5>
+
+                            <p class="">{{dish.detail}}</p>
+                            <h2>{{dish.price | currency:'￥'}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-bar-a" style="height: 60px;">
+            <a href="order.html" class="detail-button to-order-btn ui-btn ui-btn-corner-all">我要订餐</a>
+            <a href="main.html" class="detail-button see-more-btn ui-btn ui-btn-corner-all">我再看看</a>
+        </div>
+    </div>
+</div>

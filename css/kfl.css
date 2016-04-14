@@ -1,0 +1,93 @@
+*{
+  text-shadow: none;
+}
+#pagemain,#pagedetail,#order,#myorders{
+  margin-top: 30px;
+}
+.kfl-text{
+  margin:0 auto;
+  font-size: 4em;
+  color: #377CB9;
+  font-weight: bold;
+  text-align: center;
+}
+.kfl-img img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.kfl-children{
+  display: table-cell;
+  vertical-align: middle;
+}
+#main-list li img{
+  display: block;
+  width:200px;
+  height: 200px;
+  margin-top:13.5px;
+  padding-left:13.5px;
+}
+#main-list li img:hover{
+  cursor: pointer;
+}
+#loadMore button{
+  background-color:lightgreen;
+  color: #fff;
+  font-size: 1.5em;
+}
+#noMore button{
+  background-color: lightcoral;
+  font-size: 1.5em;
+  color: #fff;
+}
+.detail-head a{
+  text-decoration:none;
+}
+.detail-dish img{
+  max-width:100%;
+  display: block;
+  margin: 0 auto;
+}
+.detail-dish h2{
+  color: #ff0033;
+}
+#pagedetail .detail-button{
+  /*display: inline-block;*/
+  /*width: 10em;*/
+  font-size: 1em;
+  /*height: 2em;*/
+  /*position: absolute;*/
+  color: #ffffff;
+  float: right;
+}
+.detail-btn-parent{
+  /*position: relative;*/
+  overflow: hidden;
+}
+#pagedetail .to-order-btn{
+  /*left: 14em;*/
+  background-color: lightgreen;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#pagedetail .see-more-btn{
+  /*left: 25em;*/
+  background-color: lightsalmon;
+
+}
+#confirm{
+  background-color: lightgreen;
+}
+.warning{
+  background:lightcoral;
+  height: 1em;
+  padding: 1em;
+  border-radius: .5em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: none;
+}
+.lookOrders{
+  float: right;
+  text-decoration: none;
+}

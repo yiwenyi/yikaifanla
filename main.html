@@ -1,0 +1,34 @@
+<div data-role="page" id="pagemain" data-title="" ng-controller="mainCtrl" class="ui-page-active">
+    <div data-role="header" class="ui-header-fixed">
+        <h1></h1>
+        <a href="#" data-rel="back">返回</a>
+        <a href="#" class="btn ui-btn-corner-all ui-shadow ui-icon-bars"  ng-click="jump2Orders()">订单</a>
+    </div>
+    <div class="ui-content">
+        <form>
+            <label for="kw"></label>
+                <input type="text" placeholder="search" id="kw" ng-model="kw"/>
+        </form>
+        <ul data-role="listview" data-inset="true" id="main-list">
+
+            <li ng-repeat="k in dishList">
+                <a href="javascript:void(0)" ng-click="jump2Detail(k.did)">
+                    <img ng-src="img/{{k.img_sm}}" alt=""/>
+
+                    <h1>{{k.name}}</h1>
+
+                    <p>{{k.material}}</p>
+
+                    <h3>{{k.price | currency:'￥'}}</h3>
+                </a>
+
+            </li>
+        </ul>
+        <div id="loadMore" ng-show="hasMore" ng-click="loadingMore()">
+            <button class="ui-corner-all">加载更多</button>
+        </div>
+        <div id="noMore" ng-hide="hasMore">
+            <button class="ui-corner-all">没有更多可以加载了</button>
+        </div>
+    </div>
+</div>
